@@ -1,7 +1,7 @@
 package main
 
 import (
-	m "test/internal/app/task1"
+	 f "2maps/internal/app/task1"
 )
 
 func main() {
@@ -22,5 +22,5 @@ func main() {
 		"three": 2,
 		"four": 4,
 	}
-	m.Compare(mOne, mTwo)
+	f.Compare(mOne, mTwo)
 }

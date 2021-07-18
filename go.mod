@@ -1,3 +1,3 @@
-module github.com/Teramun/2maps
+module 2maps
 
 go 1.16

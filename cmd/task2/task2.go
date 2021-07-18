@@ -1,7 +1,7 @@
 package main
 
 import (
-	m "test/internal/app/task2"
+	"2maps/internal/app/task2"
 )
 
 func main() {
@@ -22,5 +22,5 @@ func main() {
 		"three": 2,
 		"four": 4,
 	}
-	m.NCompare(mOne, mTwo)
+	task2.NCompare(mOne, mTwo)
 }
