@@ -1,3 +1,4 @@
+//внутри get-метода имени пользователя менять все гласные на большие гласные
 package main
 
 import (
@@ -8,11 +9,15 @@ import (
 
 func main() {
 	user := task3.User{}
-	user.SetName("Anya")
+	user.SetName("elena")
 	err := user.SetPhone(79803086117)
 	if err != nil {
 		log.Fatal()
 	}
-	fmt.Println(user.Name())
+	name := user.Name()
+	for i := 0; i < len(name); i++ {
+		fmt.Print(string(name[i]))
+	}
+	fmt.Print("\n")
 	fmt.Println(user.Phone())
 }
