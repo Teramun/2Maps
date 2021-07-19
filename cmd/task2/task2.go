@@ -4,6 +4,7 @@ import (
 	"2maps/internal/app/task2"
 )
 
+//TODO: refactor
 func main() {
 	mOne := make(map[string]int)
 	mTwo := make(map[string]int)

@@ -7,6 +7,8 @@ type User struct {
 	phone int
 }
 
+//check username, changes small vowel letters to large ones and add it to the struct
+//TODO: refactor
 func(u *User) SetName(name string) {
 	var newName = make([]rune, len(name))
 	var letter rune
@@ -37,6 +39,7 @@ func(u *User) SetName(name string) {
 	}
 	u.name = newName
 }
+//check the user's phone number and add it to the struct
 func(u *User) SetPhone(phone int) error {
 	if phone < 1000000000 || phone > 999999999999999 {
 		return errors.New("invalid number")
@@ -45,9 +48,11 @@ func(u *User) SetPhone(phone int) error {
 	return nil
 }
 
+//returns the username from the struct
 func(u *User) Name() []rune {
 	return u.name
 }
+//returns the user's phone number from the struct
 func(u *User) Phone() int {
 	return u.phone
 }
