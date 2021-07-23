@@ -2,6 +2,7 @@ package main
 
 import (
 	"2maps/internal/app/task2"
+	"fmt"
 )
 
 //TODO: refactor
@@ -23,5 +24,11 @@ func main() {
 		"three": 2,
 		"four": 4,
 	}
-	task2.NCompare(mOne, mTwo)
+	newMap, newMapTwo := task2.NCompare(mOne, mTwo)
+	for key, value := range newMap{
+		fmt.Println(key, value)
+	}
+	for key, value := range newMapTwo{
+		fmt.Println(key, value)
+	}
 }

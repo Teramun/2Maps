@@ -1,17 +1,18 @@
 package task2
 
-import "fmt"
-
 //prints unique key-value pairs
-func NCompare(mapOne, mapTwo map[string]int) {
+func NCompare(mapOne, mapTwo map[string]int) (map[string]int, map[string]int) {
+	newMap := make(map[string]int)
+	newMapTwo := make(map[string]int)
 	for keyTwo, valueTwo := range mapTwo {
 		if valueTwo != mapOne[keyTwo] {
-			fmt.Println(keyTwo, valueTwo)
+			newMap[keyTwo] = valueTwo
 		}
 	}
 	for keyOne, valueOne := range mapOne {
 		if valueOne != mapTwo[keyOne] {
-			fmt.Println(keyOne, valueOne)
+			newMapTwo[keyOne] = valueOne
 		}
 	}
+	return newMap, newMapTwo
 }

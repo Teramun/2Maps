@@ -1,6 +1,8 @@
 package task1
 
-import "testing"
+import (
+	"testing"
+)
 
 type maps struct {
 	numbersOne, numbersTwo, expected map[string]int
@@ -23,12 +25,13 @@ func TestCompare(t *testing.T) {
 		expected: map[string]int{},
 	},
 	}
-	for _, value := range tests {
-		result := Compare(value.numbersOne, value.numbersTwo)
-
-		for k, v := range result {
-			if v != value.expected[k] {
-			t.Errorf("bb")
+	for index, value := range tests {
+			result := Compare(value.numbersOne, value.numbersTwo)
+			count := index + 1
+			for k, v := range result {
+				if v != value.expected[k] {
+					t.Errorf("Test number %v failed.", count)
+				}
 			}
 		}
 	}

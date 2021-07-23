@@ -24,7 +24,7 @@ func(u *User) SetName(name string) {
 			letter = 'I'
 			newName[i] = letter
 		} else if name[i] == 111 {
-			letter = 'I'
+			letter = 'O'
 			newName[i] = letter
 		} else if name[i] == 117 {
 			letter = 'U'
