@@ -33,11 +33,11 @@ func TestCompare(t *testing.T) {
 		result := Compare(value.numbersOne, value.numbersTwo)
 		for keyResult, valueResult := range result {
 			if valueResult != value.expected[keyResult] {
-				t.Log("BAD TEST (different values)", value.testName)
+				t.Error("BAD TEST (different values)", value.testName)
 			}
 		}
 		if len(result) != len(value.expected) {
-			t.Log("BAD TEST (different maps len)", value.testName)
+			t.Error("BAD TEST (different maps len)", value.testName)
 		}
 	}
 }

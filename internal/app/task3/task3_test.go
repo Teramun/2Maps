@@ -40,10 +40,10 @@ func TestSetName(t *testing.T) {
 
 		for index, letter := range value.expected {
 			if letter != result.Name()[index] {
-				t.Log("BAD TEST", value.nameTest)
+				t.Error("BAD TEST", value.nameTest)
 			}
 			if len(value.expected) != len(result.Name()) {
-				t.Log("BAD TEST", value.nameTest)
+				t.Error("BAD TEST", value.nameTest)
 			}
 		}
 	}
