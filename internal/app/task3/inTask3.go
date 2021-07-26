@@ -56,5 +56,3 @@ func(u *User) Name() []rune {
 func(u *User) Phone() int {
 	return u.phone
 }
-
-
