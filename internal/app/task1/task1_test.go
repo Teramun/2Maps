@@ -34,7 +34,7 @@ func TestCompare(t *testing.T) {
 	for index, value := range tests {
 		count := index + 1
 
-		t.Errorf("test case number %v: %s", count, value.testName)
+		t.Logf("test case number %v: %s", count, value.testName)
 		t.Log("maps for comparison: first map:", value.numbersOne, ", second map:", value.numbersTwo)
 
 		result := Compare(value.numbersOne, value.numbersTwo)
@@ -45,7 +45,7 @@ func TestCompare(t *testing.T) {
 				t.Error("BAD TEST (different values)", value.testName)
 			}
 		}
-		t.Errorf("check maps by length: lenght result - %v, lenght expected - %v", len(result), len(value.expected))
+		t.Logf("check maps by length: lenght result - %v, lenght expected - %v", len(result), len(value.expected))
 		if len(result) != len(value.expected) {
 			t.Log("BAD TEST (different maps len)", value.testName)
 		}
