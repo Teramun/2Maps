@@ -7,10 +7,9 @@ func ChangeNumber() {
 	var number float64
 	fmt.Scan(&number)
 
-	for i := 0; i < 3; i++ {
+	for i := 0; i < 20; i++ {
 		number = number * 5 / 2
+		fmt.Println(number)
 	}
-
-	fmt.Println(number, "\n")
 }
 
