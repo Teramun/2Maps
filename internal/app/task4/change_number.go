@@ -5,7 +5,7 @@ import "fmt"
 //performs mathematical operations with the entered number
 func ChangeNumber() {
 	var number float64
-	fmt.Scan(&number)
+	number = 2
 
 	for i := 0; i < 20; i++ {
 		number = number * 5 / 2
